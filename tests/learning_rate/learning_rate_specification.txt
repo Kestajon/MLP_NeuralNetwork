@@ -1,0 +1,21 @@
+-----------------------------------------
+|         Network Specification         |
+-----------------------------------------
+| 		   |  Close(1)/High(1)  |
+| Possible Inputs  |  Close(1)/Open(1)  |
+| 		   |  Close(1)/Low(1)	|
+-----------------------------------------
+| Network Topology |      [3, 15, 1]	|
+-----------------------------------------
+| 		   |	   0.01		|
+|  Learning Rate   |	   0.001	|
+| 		   |	   0.0001	|
+-----------------------------------------
+|      Lambda      |	   0.001	|
+-----------------------------------------
+
+This was a simple test to determine how altering the learning rate affected the system, 
+
+—- Evaluation —-
+
+As can be seen from the tests the learning rate of 0.01 was too low to produce an accurate result, causing the cost to iterate around its’ solution, rather than reach it. The learning rate set at 0.0001 seemed to require a far too long time to reach the result to be practical, and in the end produced a similar result to the learning rate of 0.001. Therefore 0.001 was selected as the best result for the the optimised system.

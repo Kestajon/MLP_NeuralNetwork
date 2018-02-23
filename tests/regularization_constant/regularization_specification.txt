@@ -1,0 +1,45 @@
+-----------------------------------------
+|         Network Specification         |
+-----------------------------------------
+| 		   |  Close(1)/High(1)  |
+| Possible Inputs  |  Close(1)/Open(1)  |
+| 		   |  Close(1)/Low(1)	|
+-----------------------------------------
+| Network Topology |     [3, 15, 1]	|
+-----------------------------------------
+|  Learning Rate   |	   0.001	|
+-----------------------------------------
+|		   |	      0		|
+|		   |	   0.0001	|
+|      Lambda      |	   0.0005	|
+|		   |       0.001	|
+|		   |	   0.005	|
+-----------------------------------------
+
+This was a simple test to determine how changing the regularization constant would affect the system
+
+—- Evaluation —-
+
+The results from test 1 show that a regularization constant of 0.001 produced the lowest cost. This was consistently shown over repeats of the tests. It is also interesting to note that the smallest cost was actually the initial result for the lambda value of 0.0001, however this was just due to how the random variables are setup.
+
+As there is quite a large difference between each of the values, a smaller range around 0.001 was also tested in test 2, using the following specification
+
+-----------------------------------------
+|         Network Specification         |
+-----------------------------------------
+| 		   |  Close(1)/High(1)  |
+| Possible Inputs  |  Close(1)/Open(1)  |
+| 		   |  Close(1)/Low(1)	|
+-----------------------------------------
+| Network Topology |     [3, 15, 1]	|
+-----------------------------------------
+|  Learning Rate   |	   0.001	|
+-----------------------------------------
+|		   |	      0		|
+|		   |	   0.0005	|
+|      Lambda      |	   0.00075	|
+|		   |       0.001	|
+|		   |	   0.00125	|
+-----------------------------------------
+
+The results from the second test also show that 0.001 produced the best result.

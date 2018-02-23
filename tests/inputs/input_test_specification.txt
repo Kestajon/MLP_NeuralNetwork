@@ -1,0 +1,58 @@
+-----------------------------------------
+|         Network Specification         |
+-----------------------------------------
+| 		   |  Close(1)/High(1)  |
+|		   |   High(1)/High(2)  |
+| Possible Inputs  |   High(1)/Close(2) |
+|		   |  Close(1)/Open(1)  |
+|		   |   Open(1)/Close(2) |
+-----------------------------------------
+| Network Topology |    [1…5, 15, 1]	|
+-----------------------------------------
+| Learning Rate	   |	    0.001	|
+-----------------------------------------
+|      Lambda	   |	      0		|
+-----------------------------------------
+
+In the tests the inputs increased adding inputs from the list in descending order. 
+
+—- Evaluation —-
+These tests did not test how each input affected the result independently, however looking at the results, would suggest which appears to be the most accurate predictor of the high of the day, that being the 4th input, Close(1)/Open(1). Of course no test was run without the first input so that could be even more significant than the Close(1)/Open(1).
+
+Several more tests like this were run, and the following table of effects was produced:
+
+----------------------------------------------------------
+|  Major Effects   |  Minor Effects   |    No Effect     |
+----------------------------------------------------------
+| Close(1)/Open(1) | Close(2)/High(2) | High(1)/High(2)  |
+----------------------------------------------------------
+| Close(1)/Low(1)  |		      | High(1)/Close(2) |
+----------------------------------------------------------
+|		   |		      | Open(1)/Close(2) |
+----------------------------------------------------------
+|		   |		      | Close(1)/Open(2) |
+----------------------------------------------------------
+|		   |		      | Close(1)/Close(2)|
+----------------------------------------------------------
+|		   |		      |   Low(1)/Low(2)  |
+----------------------------------------------------------
+|		   |		      |  Open(1)/Open(2) |
+----------------------------------------------------------
+|		   |		      | Close(1)/Open(2) |
+----------------------------------------------------------
+
+The three inputs which appeared to have the most effect were used to create a neural network with three inputs, which followed the following specification. This created the results shown in the three_inputs folder within the inputs test folder.
+
+-----------------------------------------
+|         Network Specification         |
+-----------------------------------------
+| 		   |  Close(1)/High(1)  |
+| Possible Inputs  |  Close(1)/Open(1)  |
+| 		   |  Close(1)/Low(1)	|
+-----------------------------------------
+| Network Topology |      [3, 15, 1]	|
+-----------------------------------------
+| Learning Rate	   |	    0.001	|
+-----------------------------------------
+|      Lambda	   |	      0		|
+-----------------------------------------

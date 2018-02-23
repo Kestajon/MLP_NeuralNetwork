@@ -1,0 +1,23 @@
+------------------------------------------
+|         Network Specification          |
+------------------------------------------
+| 		   |  Close(1)/High(1)   |
+| Possible Inputs  |  Close(1)/Open(1)   |
+| 		   |  Close(1)/Low(1)	 |
+------------------------------------------
+| Network Topology |[3, 6, 7, 4, 5, 2, 1]|
+------------------------------------------
+|  Learning Rate   |	   0.001	 |
+------------------------------------------
+|		   |	      0		 |
+|		   |	   0.0001	 |
+|      Lambda      |	   0.0005	 |
+|		   |       0.001	 |
+|		   |	   0.005	 |
+------------------------------------------
+
+The final result from the other tests, resulted in the network specification shown above, this produced the results in this folder.
+
+—- Evaluation —-
+
+The network produces a better result than the original results or any of the individual tests. However it is still not a good predictor of the S&P 500. That being said, the network served its’ purpose and accurately performed its’ job. 
